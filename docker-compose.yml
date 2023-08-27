@@ -1,0 +1,30 @@
+version: '3.8'
+
+networks:
+  back-tier:
+
+services:
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus/:/etc/prometheus/
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    ports:
+      - 9090:9090
+    depends_on:
+      - pushgateway
+    networks:
+      - back-tier
+    restart: always
+
+  pushgateway:
+    image: prom/pushgateway
+    expose:
+      - 9091
+    ports:
+      - 9091:9091
+    networks:
+      - back-tier
+    restart: always
