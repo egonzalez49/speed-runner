@@ -1,0 +1,3 @@
+push_gateway:
+  host: 'localhost'
+  port: 9091
