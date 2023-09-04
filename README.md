@@ -26,14 +26,6 @@
   <p align="center">
     Perform internet speed tests and push metrics to a Prometheus server
     <br />
-    <a href="https://github.com/egonzalez49/speed-runner"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/egonzalez49/speed-runner">View Demo</a>
-    ·
-    <a href="https://github.com/egonzalez49/speed-runner/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/egonzalez49/speed-runner/issues">Request Feature</a>
   </p>
 </div>
 
@@ -81,16 +73,22 @@ Have you ever wondered if your ISP is throttling your internet speeds? You can u
 
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+There are two methods for installing this package, either by building the binary locally or downloading an existing binary.  
+**Note:** Only a Linux AMD64 binary is provided. If you'd like to build for another OS/ARCH, please see the steps to build the binary locally.
 
 ### Prerequisites
 
-This is a of list technologies you need in order to run the program.
+This is a of list technologies you need in order to build the program manually.
 
-- [Docker](https://www.docker.com/products/docker-desktop/)
 - [Rust](https://www.rust-lang.org/tools/install)
 
 ### Installation
+
+#### Binary Download
+
+See the [releases page](https://github.com/egonzalez49/speed-runner/releases/latest) to download a binary and then add it to a directory in your system path.
+
+#### Manual Build
 
 1. Clone the repo
    ```sh
